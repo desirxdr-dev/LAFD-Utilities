@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+
+# Environment variables (VERY IMPORTANT)
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database files
+*.sqlite
+*.sqlite3
+database.sqlite
+
+# PM2
+pm2.pid
+pids
+*.pid
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Temporary files
+tmp/
+temp/
+
+# Build files
+dist/
+build/
+
+# Coverage
+coverage/
+
+# Optional config backups
+*.bak
