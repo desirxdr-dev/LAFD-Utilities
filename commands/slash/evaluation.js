@@ -95,7 +95,7 @@ if (sub === "issue") {
         },
         {
           "type": 10,
-          "content": "**User**: ${user}\n**Rating**: ${rating}\n**Reason**: ${reason}"
+          "content": `**User**: ${user}\n**Rating**: ${rating}\n**Notes**: ${notes}`
         },
         {
           "type": 1,
@@ -103,7 +103,7 @@ if (sub === "issue") {
             {
               "style": 4,
               "type": 2,
-              "label": "${rating}/5",
+              "label": `${rating}/5`,
               "flow": {
                 "actions": []
               },
@@ -164,7 +164,7 @@ if (sub === "issue") {
         },
         {
           "type": 10,
-          "content": `**User**: ${user}\n**Rating**: ${rating}\n**Reason**: ${reason}`
+          "content": `**User**: ${user}\n**Rating**: ${rating}\n**Notes**: ${notes}`
         },
         {
           "type": 1,
