@@ -65,14 +65,139 @@ if (!channel) {
 
 if (sub === "issue") {
 
+  await user.send({
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1480452225149964454/1481354133024936117/ECHO_Customs_1.png?ex=69b3020b&is=69b1b08b&hm=445deb99c715e39103cbee73383cc386dc51ab725804f1b2128d1a4c26812d2b&=&format=webp&quality=lossless&width=550&height=189"
+              }
+            }
+          ]
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": "An evaluation has been issued to you. Review information below."
+        },
+        {
+          "type": 14,
+          "divider": false
+        },
+        {
+          "type": 10,
+          "content": "**User**: ${user}\n**Rating**: ${rating}\n**Reason**: ${reason}"
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "style": 4,
+              "type": 2,
+              "label": "${rating}/5",
+              "flow": {
+                "actions": []
+              },
+              "custom_id": "p_278951624951468044"
+            }
+          ]
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1480452225149964454/1480598651091812614/TXRP.png?ex=69b2e572&is=69b193f2&hm=ffee8f61382ec4792a35113e163f126d1375e34061805c317920e5d297d73211&=&format=webp&quality=lossless&width=2512&height=79"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+})
   await interaction.reply({
     content: "<:check:1480446183997571296> **Successfully issued evaluation.**",
     ephemeral: true
   });
 
-  channel.send(`Evaluation issued for ${user}
-Rating: **${rating}/5**
-Notes: ${notes}`);
+  channel.send({
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1480452225149964454/1481354133024936117/ECHO_Customs_1.png?ex=69b3020b&is=69b1b08b&hm=445deb99c715e39103cbee73383cc386dc51ab725804f1b2128d1a4c26812d2b&=&format=webp&quality=lossless&width=550&height=189"
+              }
+            }
+          ]
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 10,
+          "content": `An evaluation has been issued by ${interaction.user}. Review information below.`
+        },
+        {
+          "type": 14,
+          "divider": false
+        },
+        {
+          "type": 10,
+          "content": `**User**: ${user}\n**Rating**: ${rating}\n**Reason**: ${reason}`
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "style": 4,
+              "type": 2,
+              "label": `${rating}/5`,
+              "flow": {
+                "actions": []
+              },
+              "custom_id": "p_278951624951468044"
+            }
+          ]
+        },
+        {
+          "type": 14,
+          "spacing": 2
+        },
+        {
+          "type": 12,
+          "items": [
+            {
+              "media": {
+                "url": "https://media.discordapp.net/attachments/1480452225149964454/1480598651091812614/TXRP.png?ex=69b2e572&is=69b193f2&hm=ffee8f61382ec4792a35113e163f126d1375e34061805c317920e5d297d73211&=&format=webp&quality=lossless&width=2512&height=79"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+})
 }
 
 }
